@@ -42,7 +42,7 @@ class MainBloc extends Bloc<MainEvent, MainState> {
   void _downloadResume(_DownloadResume event, Emitter<MainState> emit) async {
     emit(state.copyWith(isResumeDownloading: true));
     try {
-      final ByteData bytes = await rootBundle.load(AppAssets.myResume);
+      final ByteData bytes = await rootBundle.load(AppAssets.myResumeNew);
       final blob = html.Blob([bytes.buffer.asUint8List()]);
       final url = html.Url.createObjectUrlFromBlob(blob);
       final anchor = html.AnchorElement(href: url)

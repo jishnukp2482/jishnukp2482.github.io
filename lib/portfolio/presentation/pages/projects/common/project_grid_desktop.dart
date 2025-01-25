@@ -33,7 +33,7 @@ class ProjectsGridMenu extends StatelessWidget {
   final projectsList = <ProjectsModal>[
     ProjectsModal(
         id: 0,
-        projectPhotos: [AppAssets.passbookFirstImg],
+        projectPhotos: [AppAssets.passbookZerothImg,AppAssets.passbookFirstImg,AppAssets.passbookThirdImg,],
         projectName: "Mobile PassBook",
         subttileOverView:
             "The Passbook app is a versatile financial management tool designed to simplify users' financial activities",
@@ -53,7 +53,7 @@ class ProjectsGridMenu extends StatelessWidget {
         ]),
     ProjectsModal(
         id: 1,
-        projectPhotos: [AppAssets.agentFirstImg],
+        projectPhotos: [AppAssets.agentFirstImg,AppAssets.agentSecondImg],
         projectName: "Agent Collection",
         subttileOverView:
             "A convenient app enabling bank staff to collect payments from customers at their homes, ensuring efficient processing and customizable reporting.",
@@ -74,7 +74,7 @@ class ProjectsGridMenu extends StatelessWidget {
         ]),
     ProjectsModal(
         id: 2,
-        projectPhotos: [AppAssets.microFinFirstImg],
+        projectPhotos: [AppAssets.microFinFirstImg,AppAssets.microFinSecondImg],
         projectName: "Microfinance (MFI)",
         subttileOverView:
             "A personal loan application for bank employees to create customer profiles, request loans, and track loan approvals and collections.",
@@ -94,7 +94,7 @@ class ProjectsGridMenu extends StatelessWidget {
         ]),
     ProjectsModal(
         id: 3,
-        projectPhotos: [AppAssets.clubFirstImg],
+        projectPhotos: [AppAssets.clubFirstImg,AppAssets.clubSecondImg],
         projectName: "Club Management App",
         subttileOverView:
             "A club management solution for handling orders, table reservations, and member management, with enhanced functionality for administrators.",
@@ -115,7 +115,7 @@ class ProjectsGridMenu extends StatelessWidget {
         ]),
     ProjectsModal(
         id: 4,
-        projectPhotos: [AppAssets.kvgbFirstImg],
+        projectPhotos: [AppAssets.kvgbFirstImg,AppAssets.kvgbSecondImg],
         projectName: "Karnataka vikas grameena bank(SMA)",
         subttileOverView:
             "Also Known as Kvgb Loan Recovery.A comprehensive solution for agents to manage loan and asset information, track properties, and streamline the collection process.",
@@ -136,7 +136,7 @@ class ProjectsGridMenu extends StatelessWidget {
         ]),
     ProjectsModal(
         id: 5,
-        projectPhotos: [AppAssets.loanRecoveryFirstImg],
+        projectPhotos: [AppAssets.loanRecoveryFirstImg,AppAssets.loanRecoverySecondImg],
         projectName: "Loan Recovery",
         subttileOverView:
             "A dynamic app enabling loan recovery agents to securely collect payments and track loan recovery processes across multiple banks.",
