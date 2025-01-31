@@ -33,7 +33,11 @@ class ProjectsGridMenu extends StatelessWidget {
   final projectsList = <ProjectsModal>[
     ProjectsModal(
         id: 0,
-        projectPhotos: [AppAssets.passbookZerothImg,AppAssets.passbookFirstImg,AppAssets.passbookThirdImg,],
+        projectPhotos: [
+          AppAssets.passbookZerothImg,
+          AppAssets.passbookFirstImg,
+          AppAssets.passbookThirdImg,
+        ],
         projectName: "Mobile PassBook",
         subttileOverView:
             "The Passbook app is a versatile financial management tool designed to simplify users' financial activities",
@@ -53,7 +57,7 @@ class ProjectsGridMenu extends StatelessWidget {
         ]),
     ProjectsModal(
         id: 1,
-        projectPhotos: [AppAssets.agentFirstImg,AppAssets.agentSecondImg],
+        projectPhotos: [AppAssets.agentFirstImg, AppAssets.agentSecondImg],
         projectName: "Agent Collection",
         subttileOverView:
             "A convenient app enabling bank staff to collect payments from customers at their homes, ensuring efficient processing and customizable reporting.",
@@ -74,7 +78,10 @@ class ProjectsGridMenu extends StatelessWidget {
         ]),
     ProjectsModal(
         id: 2,
-        projectPhotos: [AppAssets.microFinFirstImg,AppAssets.microFinSecondImg],
+        projectPhotos: [
+          AppAssets.microFinFirstImg,
+          AppAssets.microFinSecondImg
+        ],
         projectName: "Microfinance (MFI)",
         subttileOverView:
             "A personal loan application for bank employees to create customer profiles, request loans, and track loan approvals and collections.",
@@ -94,7 +101,7 @@ class ProjectsGridMenu extends StatelessWidget {
         ]),
     ProjectsModal(
         id: 3,
-        projectPhotos: [AppAssets.clubFirstImg,AppAssets.clubSecondImg],
+        projectPhotos: [AppAssets.clubFirstImg, AppAssets.clubSecondImg],
         projectName: "Club Management App",
         subttileOverView:
             "A club management solution for handling orders, table reservations, and member management, with enhanced functionality for administrators.",
@@ -115,7 +122,7 @@ class ProjectsGridMenu extends StatelessWidget {
         ]),
     ProjectsModal(
         id: 4,
-        projectPhotos: [AppAssets.kvgbFirstImg,AppAssets.kvgbSecondImg],
+        projectPhotos: [AppAssets.kvgbFirstImg, AppAssets.kvgbSecondImg],
         projectName: "Karnataka vikas grameena bank(SMA)",
         subttileOverView:
             "Also Known as Kvgb Loan Recovery.A comprehensive solution for agents to manage loan and asset information, track properties, and streamline the collection process.",
@@ -136,7 +143,10 @@ class ProjectsGridMenu extends StatelessWidget {
         ]),
     ProjectsModal(
         id: 5,
-        projectPhotos: [AppAssets.loanRecoveryFirstImg,AppAssets.loanRecoverySecondImg],
+        projectPhotos: [
+          AppAssets.loanRecoveryFirstImg,
+          AppAssets.loanRecoverySecondImg
+        ],
         projectName: "Loan Recovery",
         subttileOverView:
             "A dynamic app enabling loan recovery agents to securely collect payments and track loan recovery processes across multiple banks.",
@@ -157,6 +167,30 @@ class ProjectsGridMenu extends StatelessWidget {
         ]),
     ProjectsModal(
         id: 6,
+        projectPhotos: [AppAssets.imgCollectionImg],
+        projectName: "Image Collection",
+        subttileOverView:
+            "Seamlessly Update Customer Images & Signatures for Secure Banking",
+        overView:
+            "Image Collection is a specialized mobile application designed to facilitate the seamless updating of customer profile images, proof images, and signature images—including virtual signatures—directly to a bank's database. This app is intended to enhance the efficiency of banking operations by providing a secure, digital solution for capturing, verifying, and storing essential customer documents in real-time.This solution is particularly useful for banking institutions that require frequent updates to customer records, ensuring that all images and signatures are current, verifiable, and securely stored.",
+        frontEndTechnologies: [
+          "Built using Flutter with Getx state management and Clean Architecture.",
+        ],
+        backendTechnologiesUsed: [
+          "Developed using Node.js, incorporating access and refresh tokens for secure authentication."
+        ],
+        keyFetaures: [
+          "Customer Image Update: Capture or upload a new customer profile image and update it in the bank's database.",
+          " Proof Image Upload: Add and update customer proof images (e.g., ID cards, address proofs) for verification.",
+          " Signature Capture & Upload: Upload a scanned signature or capture a new signature using a stylus or touchscreen.",
+          " Virtual Signature Support: Allows customers to sign digitally within the app for seamless documentation.",
+          " Secure Storage & Encryption: Ensures that all images and signatures are securely transmitted and stored.",
+          " Real-Time Updates: Instantly syncs with the bank’s system, reducing paperwork and processing time.",
+          " User Authentication: Ensures secure access for authorized bank personnel.",
+          " Multi-Device Compatibility: Works across mobile and tablet devices for ease of use.",
+        ]),
+    ProjectsModal(
+        id: 7,
         projectPhotos: [AppAssets.gasFirstImg],
         projectName: "Gas Agenecy",
         subttileOverView:
@@ -180,7 +214,7 @@ class ProjectsGridMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-        physics: NeverScrollableScrollPhysics(),
+      physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: crossAxisCount ?? 3,

@@ -5,12 +5,28 @@ import 'package:potfolio/portfolio/domain/entities/projects/projects_modal.dart'
 import 'package:potfolio/portfolio/presentation/pages/projects/desktop/project_view_desktop.dart';
 import 'package:potfolio/portfolio/presentation/pages/projects/mobile/project_view_mobile.dart';
 import 'package:potfolio/portfolio/presentation/pages/projects/tab/project_view_tab.dart';
+import 'package:potfolio/portfolio/presentation/themes/app_colors.dart';
+import 'package:potfolio/portfolio/presentation/widgets/custom/custom_print.dart';
 
 class ProjectsViewPage extends StatelessWidget {
   const ProjectsViewPage({super.key, required this.projectsModal});
   final ProjectsModal projectsModal;
   @override
   Widget build(BuildContext context) {
+    double widthValue = MediaQuery.of(context).size.width;
+    customPrint("width=${MediaQuery.of(context).size.width}");
+    double textSize = 12;
+    double copySize = 12;
+    if (widthValue == 600 || widthValue <= 600) {
+      textSize = 23;
+      copySize = 27;
+    } else if (widthValue == 1200 || widthValue <= 1200) {
+      textSize = 15;
+      copySize = 20;
+    } else {
+      textSize = 12;
+      copySize = 12;
+    }
     return SafeArea(
       child: Scaffold(
         body: LayoutBuilder(
@@ -19,9 +35,7 @@ class ProjectsViewPage extends StatelessWidget {
               // Mobile view
               return ListView(
                 children: [
-                  ProjectViewMobile(
-                    projectsModal:projectsModal
-                  ),
+                  ProjectViewMobile(projectsModal: projectsModal),
                 ],
               );
             } else if (constraints.maxWidth < 1200) {
@@ -29,9 +43,7 @@ class ProjectsViewPage extends StatelessWidget {
               return ListView(
                 padding: EdgeInsets.all(50.w),
                 children: [
-                  ProjectViewTab(
-                    projectsModal: projectsModal
-                  ),
+                  ProjectViewTab(projectsModal: projectsModal),
                 ],
               );
             } else {
@@ -39,13 +51,40 @@ class ProjectsViewPage extends StatelessWidget {
               return ListView(
                 padding: EdgeInsets.all(50.w),
                 children: [
-                  ProjectViewDesktop(
-                    projectsModal:projectsModal
-                  ),
+                  ProjectViewDesktop(projectsModal: projectsModal),
                 ],
               );
             }
           },
+        ),
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.all(2.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.baseline,
+            textBaseline: TextBaseline.ideographic,
+            children: [
+              Text(
+                "©",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: copySize.w,
+                  color: AppColors.white.withOpacity(0.2),
+                ),
+              ),
+              SizedBox(
+                width: 5.w,
+              ),
+              Text(
+                "jishnu kp 2025",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: textSize.w,
+                  color: AppColors.white.withOpacity(0.2),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

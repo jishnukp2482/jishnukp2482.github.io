@@ -29,6 +29,7 @@ class AppAssets {
   static const microFinSecondImg ="assets/img/projects/mfi_second_page.png";
   static const agentFirstImg = "assets/img/projects/agent_first_img.png";
   static const agentSecondImg = "assets/img/projects/agent_collection_second_page.png";
+  static const imgCollectionImg = "assets/img/projects/image_collection_img.png";
   //resume
   static const myResume = "assets/resume/Jishnu_Kp_Flutter-1.pdf";
   static const myResumeNew = "assets/resume/Jishnu_jp_flutter_Developer_new.pdf";
